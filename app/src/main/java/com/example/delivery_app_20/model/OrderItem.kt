@@ -17,13 +17,13 @@ enum class OrderStatus {
 data class Order(
     val id: String,
     val items: List<OrderItem>,
-    val total: Int,  // CAMBIA Double por Int
+    val total: Int,
     val status: OrderStatus,
     val date: Date,
     val address: String
 ) {
     companion object {
-        fun calculateTotal(items: List<OrderItem>): Int {  // CAMBIA Double por Int
+        fun calculateTotal(items: List<OrderItem>): Int {
             return items.sumOf { it.foodItem.price * it.quantity }
         }
     }

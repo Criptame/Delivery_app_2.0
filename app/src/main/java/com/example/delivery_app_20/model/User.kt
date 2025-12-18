@@ -6,7 +6,7 @@ data class User(
     val email: String,
     val phone: String,
     val address: String,
-    val password: String = "" // En una app real esto iría encriptado
+    val password: String = ""
 ) {
     companion object {
         // Usuario vacío por defecto (no logueado)
