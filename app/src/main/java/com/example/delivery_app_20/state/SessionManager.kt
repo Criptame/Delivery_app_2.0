@@ -1,9 +1,9 @@
-package com.example.delivery_20.state
+package com.example.delivery_app_20.state
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import com.example.delivery_20.model.User
+import com.example.delivery_app_20.model.User
 
 object SessionManager {
     var currentUser by mutableStateOf<User?>(null)

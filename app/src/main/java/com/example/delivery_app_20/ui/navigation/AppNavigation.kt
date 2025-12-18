@@ -1,4 +1,4 @@
-package com.example.delivery_20.ui.navigation
+package com.example.delivery_app_20.ui.navigation
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -8,11 +8,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.delivery_20.screen.*
-import com.example.delivery_20.viewmodel.CartViewModel
-import com.example.delivery_20.ui.navigation.Screen
 
-// ✅ SOLO UNA DEFINICIÓN DE Screen
+import com.example.delivery_app_20.ui.screen.*
+import com.example.delivery_app_20.viewmodel.CartViewModel
+
 sealed class Screen(val route: String) {
     object Home : Screen("home")
     object Search : Screen("search")
@@ -27,28 +26,32 @@ sealed class Screen(val route: String) {
     object Login : Screen("login")
     object Register : Screen("register")
     object EditProfile : Screen("edit_profile")
-    object OrderConfirmation : Screen("order_confirmation") // ← NUEVA RUTA
+    object OrderConfirmation : Screen("order_confirmation")
 }
 
 @Composable
 fun AppNavigation(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = Screen.Home.route,
-    cartViewModel: CartViewModel = viewModel() // ← ÚNICA instancia compartida
+    startDestination: String = Screen.Home.route
 ) {
+    val cartViewModel: CartViewModel = viewModel()
+
     NavHost(
         navController = navController,
         startDestination = startDestination,
         modifier = modifier
     ) {
-        // Pantallas principales
+        // ✅ CAMBIA ESTOS: Reemplaza Text() por las pantallas reales
+
         composable(Screen.Home.route) {
             HomeScreen(navController = navController)
         }
 
         composable(Screen.RestaurantDetail.route) { backStackEntry ->
             val restaurantId = backStackEntry.arguments?.getString("restaurantId") ?: ""
+
+            // ✅ Por esto:
             RestaurantDetailScreen(
                 navController = navController,
                 restaurantId = restaurantId,
@@ -64,10 +67,44 @@ fun AppNavigation(
         }
 
         composable(Screen.Profile.route) {
+
             ProfileScreen(navController = navController)
         }
 
-        // Pantallas de navegación
+        composable(Screen.Login.route) {
+
+            LoginScreen(
+                navController = navController,
+                onLoginSuccess = {
+                    navController.popBackStack()
+                    navController.navigate(Screen.Profile.route)
+                }
+            )
+        }
+
+        composable(Screen.Register.route) {
+
+            RegisterScreen(
+                navController = navController,
+                onRegisterSuccess = {
+                    navController.popBackStack()
+                    navController.navigate(Screen.Profile.route)
+                }
+            )
+        }
+
+        composable(Screen.OrderConfirmation.route) {
+            // ❌ Cambia esto:
+            // Text("Confirmación")
+
+            // ✅ Por esto:
+            OrderConfirmationScreen(
+                navController = navController,
+                cartViewModel = cartViewModel
+            )
+        }
+
+        // Agrega también las otras pantallas que faltan:
         composable(Screen.Search.route) {
             SearchScreen(navController = navController)
         }
@@ -84,37 +121,8 @@ fun AppNavigation(
             HelpScreen(navController = navController)
         }
 
-        // Pantallas de autenticación
-        composable(Screen.Login.route) {
-            LoginScreen(
-                navController = navController,
-                onLoginSuccess = {
-                    navController.popBackStack()
-                    navController.navigate(Screen.Profile.route)
-                }
-            )
-        }
-
-        composable(Screen.Register.route) {
-            RegisterScreen(
-                navController = navController,
-                onRegisterSuccess = {
-                    navController.popBackStack()
-                    navController.navigate(Screen.Profile.route)
-                }
-            )
-        }
-
         composable(Screen.EditProfile.route) {
             Text("Editar perfil (en desarrollo)")
-        }
-
-        // ✅ NUEVA PANTALLA: Confirmación de pedido
-        composable(Screen.OrderConfirmation.route) {
-            OrderConfirmationScreen(
-                navController = navController,
-                cartViewModel = cartViewModel
-            )
         }
     }
 }

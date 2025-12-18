@@ -1,4 +1,4 @@
-package com.example.delivery_20.screen
+package com.example.delivery_app_20.ui.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,8 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.delivery_20.model.CartItem
-import com.example.delivery_20.viewmodel.CartViewModel
+import com.example.delivery_app_20.model.CartItem
+import com.example.delivery_app_20.viewmodel.CartViewModel
 
 @Composable
 fun CartScreen(

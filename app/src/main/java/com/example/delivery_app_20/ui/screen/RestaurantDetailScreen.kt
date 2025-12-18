@@ -1,7 +1,5 @@
 package com.example.delivery_app_20.ui.screen
 
-class RestaurantDetailScreenpackage com.example.delivery_20.screen
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -16,10 +14,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.delivery_20.model.Restaurant
-import com.example.delivery_20.model.FoodItem
-import com.example.delivery_20.viewmodel.CartViewModel
-import kotlinx.coroutines.delay
+import com.example.delivery_app_20.model.Restaurant
+import com.example.delivery_app_20.model.FoodItem
+import com.example.delivery_app_20.viewmodel.CartViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -485,5 +482,4 @@ private fun formatChileanPrice(price: Int): String {
     } else {
         "$$price"
     }
-} {
 }

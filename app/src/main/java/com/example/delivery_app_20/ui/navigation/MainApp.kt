@@ -1,4 +1,4 @@
-package com.example.delivery_20.ui.navigation
+package com.example.delivery_app_20.ui.navigation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons

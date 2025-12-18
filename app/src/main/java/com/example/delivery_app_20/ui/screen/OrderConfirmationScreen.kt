@@ -1,7 +1,5 @@
 package com.example.delivery_app_20.ui.screen
 
-class OrderConfirmationScreenpackage com.example.delivery_20.screen
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -12,11 +10,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.delivery_20.model.CartItem
-import com.example.delivery_20.viewmodel.CartViewModel
+import com.example.delivery_app_20.model.CartItem
+import com.example.delivery_app_20.viewmodel.CartViewModel
 import kotlin.random.Random
 import java.text.SimpleDateFormat
 import java.util.*
@@ -413,5 +410,4 @@ private fun getRandomDeliveryTime(): String {
 private fun getCurrentDate(): String {
     val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
     return formatter.format(Date())
-} {
 }

@@ -1,4 +1,4 @@
-package com.example.delivery_20.ui.components.buttons
+package com.example.delivery_app_20.ui.components.buttons
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.*

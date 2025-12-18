@@ -1,4 +1,4 @@
-package com.example.delivery_20.ui.components.cards
+package com.example.delivery_app_20.ui.components.cards
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -9,7 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.delivery_20.model.Restaurant
+import com.example.delivery_app_20.model.Restaurant
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

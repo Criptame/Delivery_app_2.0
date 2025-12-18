@@ -1,5 +1,5 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
-package com.example.delivery_20.screen
+package com.example.delivery_app_20.ui.screen
 
 
 import androidx.compose.foundation.layout.Box
@@ -24,9 +24,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.delivery_20.state.SessionManager
-import com.example.delivery_20.ui.components.buttons.PrimaryButton
-import com.example.delivery_20.ui.components.buttons.SecondaryButton
+import com.example.delivery_app_20.state.SessionManager
+import com.example.delivery_app_20.ui.components.buttons.PrimaryButton
+import com.example.delivery_app_20.ui.components.buttons.SecondaryButton
 
 @Composable
 fun ProfileScreen(
@@ -52,7 +52,7 @@ fun ProfileScreen(
 @Composable
 fun LoggedInProfile(
     navController: NavHostController,
-    user: com.example.delivery_20.model.User
+    user: com.example.delivery_app_20.model.User
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,

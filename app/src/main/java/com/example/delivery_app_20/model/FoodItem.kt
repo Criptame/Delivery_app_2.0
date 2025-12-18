@@ -1,4 +1,4 @@
-package com.example.delivery_20.model
+package com.example.delivery_app_20.model
 
 data class FoodItem(
     val id: String,

@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Delivery_app_2.0"
 include(":app")
- 

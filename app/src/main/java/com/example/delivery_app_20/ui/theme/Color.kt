@@ -1,4 +1,4 @@
-package com.example.delivery_app_20.ui.theme
+package com.example.delivery_20.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

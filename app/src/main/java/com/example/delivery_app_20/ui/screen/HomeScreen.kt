@@ -1,5 +1,4 @@
-
-package com.example.delivery_20.screen
+package com.example.delivery_app_20.ui.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -13,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.delivery_20.model.Restaurant
-import com.example.delivery_20.ui.components.cards.RestaurantCard
+import com.example.delivery_app_20.model.Restaurant
+import com.example.delivery_app_20.ui.components.cards.RestaurantCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

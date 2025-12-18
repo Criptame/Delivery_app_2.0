@@ -1,8 +1,5 @@
 package com.example.delivery_app_20.ui.screen
 
-class LoginScreen
-package com.example.delivery_20.screen
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
@@ -16,9 +13,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.delivery_20.state.SessionManager
-import com.example.delivery_20.ui.components.buttons.PrimaryButton
-import com.example.delivery_20.ui.components.buttons.SecondaryButton
+import com.example.delivery_app_20.state.SessionManager
+import com.example.delivery_app_20.ui.components.buttons.PrimaryButton
+import com.example.delivery_app_20.ui.components.buttons.SecondaryButton
 import kotlinx.coroutines.launch
 
 @Composable
@@ -147,6 +144,4 @@ fun LoginScreen(
             Text("Continuar como invitado")
         }
     }
-}
-{
 }

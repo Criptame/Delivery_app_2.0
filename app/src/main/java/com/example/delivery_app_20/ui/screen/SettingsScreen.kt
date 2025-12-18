@@ -1,4 +1,4 @@
-package com.example.delivery_20.screen
+package com.example.delivery_app_20.ui.screen
 
 import androidx.compose.foundation.clickable  // ¡AGREGA ESTE IMPORT!
 import androidx.compose.foundation.layout.*
