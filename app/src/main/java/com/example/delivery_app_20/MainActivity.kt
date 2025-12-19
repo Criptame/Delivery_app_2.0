@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            // Tema básico de Material3 mientras configuras tu tema personalizado
+            // Tema básico de Material3
             MaterialTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),

@@ -16,7 +16,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.delivery_20.screen.*
+import com.example.delivery_app_20.ui.screen.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.CoroutineScope
 
@@ -213,7 +213,7 @@ fun TopAppBarWithMenu(
             if (showBackButton) {
                 IconButton(onClick = onBackClick) {
                     Icon(
-                        Icons.AutoMirrored.Filled.ArrowBack, // ¡AHORA FUNCIONARÁ!
+                        Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Volver"
                     )
                 }

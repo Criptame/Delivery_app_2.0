@@ -94,8 +94,7 @@ fun HomeScreen(
             modifier = Modifier.padding(bottom = 16.dp)
         ) {
             listOf("Todos", "Pizza", "Hamburguesas", "Sushi"
-                , "Mexicana",
-                "Postres").forEach { category ->
+                ,"...").forEach { category ->
                 FilterChip(
                     selected = category == "Todos",
                     onClick = { /* Filtrar por categoría */ },

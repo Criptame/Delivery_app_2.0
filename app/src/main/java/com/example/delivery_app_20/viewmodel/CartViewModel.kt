@@ -28,7 +28,7 @@ class CartViewModel : ViewModel() {
         updateTotals()
     }
 
-    // ✅ FUNCIÓN CRÍTICA: Agregar producto al carrito
+    //Agregar producto al carrito
     fun addToCart(foodItem: FoodItem) {
         viewModelScope.launch {
             println("🛒 === ADD TO CART ===")
@@ -118,7 +118,7 @@ class CartViewModel : ViewModel() {
         }
     }
 
-    // ✅ ACTUALIZAR: Calcular totales
+    //Calcular totales
     private fun updateTotals() {
         viewModelScope.launch {
             val items = _cartItems.value
@@ -133,17 +133,17 @@ class CartViewModel : ViewModel() {
         }
     }
 
-    // ✅ NUEVO: Verificar si un item está en el carrito
+    // Verificar si un item está en el carrito
     fun isItemInCart(itemId: String): Boolean {
         return _cartItems.value.any { it.foodItem.id == itemId }
     }
 
-    // ✅ NUEVO: Obtener cantidad de un item específico
+    //  Obtener cantidad de un item específico
     fun getItemQuantity(itemId: String): Int {
         return _cartItems.value.find { it.foodItem.id == itemId }?.quantity ?: 0
     }
 
-    // ✅ NUEVO: Función de debugging
+    // Función de debugging
     fun debugCart() {
         println("🛒 === DEBUG CART ===")
         println("🛒 Items en carrito: ${_cartItems.value.size}")

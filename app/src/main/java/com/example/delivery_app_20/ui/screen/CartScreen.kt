@@ -23,7 +23,7 @@ import com.example.delivery_app_20.viewmodel.CartViewModel
 @Composable
 fun CartScreen(
     navController: NavHostController,
-    cartViewModel: CartViewModel // ← Recibir como parámetro (NO viewModel() aquí)
+    cartViewModel: CartViewModel // ← Recibir como parámetro
 ) {
     // Observar estado del carrito
     val cartItems by cartViewModel.cartItems.collectAsState()
